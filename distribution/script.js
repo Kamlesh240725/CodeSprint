@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 faqBtnGSAPTimeline.to(".faq-btn",{
                     rotate:0,
                     delay:0,
-                    duration:0.01
+                    duration:0.005
                 })
                 console.log("rotateback")
             });
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 faqBtnGSAPTimeline.to(".faq-btn-active",{
                     rotate:135,
                     delay:0,
-                    duration:0.01
+                    duration:0.005
                 })
                 console.log("rotate")
             }

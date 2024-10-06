@@ -68,6 +68,13 @@
 #box li .btn.active{
  color: white;
 }
+/* #box li button img.active{
+  transform: rotate(45deg);
+} */
+.faq-subsection ul li img{
+  transition: transform 0.3s ease;
+}
 .hidden {
   display: none; /* Hides the element */
 }
+
