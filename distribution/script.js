@@ -18,7 +18,7 @@ if(initailActive){
 }
 
 /* FAQ Btn Toggle Script */
-
+let faqBtnGSAPTimeline = gsap.timeline();
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('.btn');
 
@@ -30,19 +30,31 @@ document.addEventListener("DOMContentLoaded", function() {
             // Remove active class from all buttons and reset image rotation
             buttons.forEach(b => {
                 b.classList.remove('active');
-                b.querySelector('.img').classList.remove('active');
+                b.querySelector('.img').classList.remove('faq-btn-active');
+                faqBtnGSAPTimeline.to(".faq-btn",{
+                    rotate:0,
+                    delay:0,
+                    duration:0.01
+                })
+                console.log("rotateback")
             });
 
             // If the clicked button was not active, add the active class
             if (!isActive) {
                 this.classList.add('active');
-                this.querySelector('.img').classList.add('active'); // Rotate image
+                this.querySelector('.img').classList.add('faq-btn-active'); // Rotate image
+                faqBtnGSAPTimeline.to(".faq-btn-active",{
+                    rotate:135,
+                    delay:0,
+                    duration:0.01
+                })
+                console.log("rotate")
             }
         });
     });
 });
 
-    // hide unhide logic 
+// hide unhide logic 
 
 function toggleAnswer1() {
     const question = document.querySelector('.question1');
@@ -183,3 +195,6 @@ const blocks = document.querySelectorAll('.block');
 blocks.forEach(block => {
     observer.observe(block);
 });
+
+
+

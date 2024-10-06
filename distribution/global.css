@@ -16,7 +16,6 @@
   font-family: "PunchGradientItalic";
   src: url("../fonts/punchgradital.ttf");
 }
-
 @font-face {
     font-family: "PunchExpand";
     src: url("../fonts/punchexpand.ttf");
@@ -24,6 +23,10 @@
 @font-face {
     font-family: 'ANDMOREY Regular';
     src: url('../fonts/ANDMOREY Regular.otf') format('truetype');
+}
+@font-face {
+    font-family: 'MonomaniacOne Regular';
+    src: url('../fonts/MonomaniacOne-Regular.woff') format('truetype');
 }
 
 .punch{
