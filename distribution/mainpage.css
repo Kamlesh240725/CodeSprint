@@ -1,0 +1,76 @@
+.navDiv{
+    color: white;
+    background: none;
+    border-radius: 1rem 1rem 0 0;
+    width: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navDiv div.active{
+    background-color: white;
+    border-radius: .5rem;
+    padding: 0px 5px;
+    color: orangered;
+}
+.navDiv div a:hover{
+    color: orangered;
+}
+.navDiv div a{
+    text-decoration: none;
+}
+.titlePageBG{
+    max-width: none !important;
+}
+.regbtm{
+    max-width: none !important;
+    width: calc(100vw - 20px);
+}
+.container {
+    padding: 0;
+}
+#img-container {
+    position: relative;
+}
+.bgImg {
+    position: relative;
+    width: 199%;
+    left: -1117px;
+    top: -767px;
+}
+.logo {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: scale(0.6);
+    z-index: 2;
+}
+.infoBox {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 53%;
+    left: 25%;
+    transform: scale(0.7);
+    z-index: 2;
+}
+
+
+/* Prizes N FAQ Page's StyleSheet */
+
+.pz-banner{
+    background: linear-gradient(180deg, rgba(255,0,0,1) 14%, rgba(233,148,148,0) 100%);
+}
+#box li .btn.active{
+ color: white;
+}
+#box li button img.active{
+  transform: rotate(45deg);
+}
+.faq-subsection ul li img{
+  transition: transform 0.3s ease;
+}
+.hidden {
+  display: none; /* Hides the element */
+}

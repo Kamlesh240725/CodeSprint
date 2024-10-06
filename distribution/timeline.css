@@ -1,0 +1,184 @@
+.timeline-section {
+    background-color: #000; /* Black background color */
+    color: white;
+    font-family: 'Arial', sans-serif; /* Default fallback font */
+}
+
+.title-box {
+    position: relative;
+    background-color: red;
+    padding: 60px 40px; /* Increased padding for more height */
+    border-radius: 10px;
+    text-align: center;
+    margin: 30px auto;
+    width: 90%; /* Increased width to 90% */
+}
+
+.title-box h1 {
+    font-family: 'Punch Gradient Italic', sans-serif; /* Custom font */
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    position: relative;
+    z-index: 2; /* Ensures it is on top */
+}
+
+.title-box p {
+    font-family: 'Punch', sans-serif; /* Custom font */
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.8); /* Slightly transparent for overlap effect */
+    margin: -20px 0 0; /* Adjusts position to overlap */
+    position: relative;
+    z-index: 1; /* Ensures it is behind the h1 */
+}
+
+.timeline-title {
+    position: relative;
+    font-family: 'PunchGradientItalic', sans-serif; /* Custom font */
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: #ff0000;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.timeline-title span {
+    font-family: 'Punch', sans-serif; /* Custom font */
+    color: white;
+}
+
+/* Overlapping text */
+.overlap-title {
+    position: relative;
+    display: inline-block;
+    font-size: 48px;
+    color: #ff0000;
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.overlap-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.1); /* Light background text */
+    z-index: 1;
+    letter-spacing: 8px;
+}
+
+/* Timeline container with horizontal scroll */
+.timeline-blocks {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    cursor: grab;
+}
+
+.timeline-blocks::-webkit-scrollbar {
+    height: 8px;
+}
+
+.timeline-blocks::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+.timeline-blocks::-webkit-scrollbar-track {
+    background: black;
+}
+
+.block {
+    width: 200px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 15px;
+    position: relative;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0; /* Prevents the blocks from shrinking */
+}
+
+.block-title {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+/* Hide scrollbar */
+.timeline-blocks {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.timeline-blocks::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.title-container {
+    position: relative;
+    margin-bottom: 15px; /* Space between the title box and card */
+}
+
+.title-container .title-box {
+    margin-top: 15px;
+    position: relative;
+    top: 60%; /* Center vertically */
+    z-index: 2; /* Ensures title text is above background text */
+    color: white; /* Title text color */
+    font-size: 10vw; /* Use vw to make the font responsive */
+    font-family: 'punch'; /* Use the custom font for title */
+    padding: 10px; /* Padding for title */
+    text-align: center; /* Center the title text */
+    border: none; /* No border */
+    background-color: transparent; /* No background color */
+    width: 100%; /* Ensure the title box spans the full width */
+    height: 20%; /* Ensure the title box spans the full width */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.background-text-timeline-section {
+    position: absolute;
+    left: 50%;
+    top: 40%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    color: rgba(255, 0, 0, 0.5); /* Red color for background text */
+    font-size: 270px; /* Use viewport width for responsive sizing */
+    font-family: 'PunchGradientItalic'; /* Use the custom font for background text */
+    pointer-events: none; /* Ignore mouse events */
+    text-align: center; /* Center the background text */
+    white-space: nowrap; /* Prevent text wrapping */
+    z-index: 1; /* Ensures it is behind the title box */
+}
+
+@media (max-width: 768px) {
+    .block {
+        width: 150px;
+        height: 200px;
+    }
+
+    .block-title {
+        font-size: 16px;
+    }
+
+    .arrow {
+        font-size: 30px;
+    }
+}

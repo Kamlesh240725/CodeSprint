@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+.innerframe::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/* Font import from ttf files */
+@font-face {
+    font-family: "Punch";
+    src: url("../fonts/punch.ttf");
+  }
+@font-face {
+  font-family: "PunchGradientItalic";
+  src: url("../fonts/punchgradital.ttf");
+}
+
+@font-face {
+    font-family: "PunchExpand";
+    src: url("../fonts/punchexpand.ttf");
+  }
+@font-face {
+    font-family: 'ANDMOREY Regular';
+    src: url('../fonts/ANDMOREY Regular.otf') format('truetype');
+}
+
+.punch{
+    font-family: "Punch";
+}
+.punchgradital {
+  font-family: "PunchGradientItalic";
+}
+.punchexpand{
+    font-family: "PunchExpand";
+}
+.andmoreyregular{
+    font-family: 'ANDMOREY Regular';
+}
+
+
+
+
+
