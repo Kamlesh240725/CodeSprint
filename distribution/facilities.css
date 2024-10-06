@@ -13,8 +13,6 @@
     left: 0;
     top: 30%; /* Adjusted top position to reduce space */
     transform: translateY(-50%);
-    color: rgba(255, 0, 0, 0.5);
-    font-size: 170px;
     font-family: "PunchGradientItalic";
     pointer-events: none;
     text-align: center;
@@ -30,7 +28,6 @@ margin-top: 15px;
     z-index: 2;
     top: 0px; /* Reduced space between background text and title */
     color: white;
-    font-size: 60px;
     font-family: 'ANDMOREY Regular';
     padding: 10px 0; /* Reduced padding for title */
     background-color: transparent;
@@ -80,7 +77,6 @@ margin-top: 5px;
     left: 0px;
     top: 30%;
     transform: translateY(-50%);
-    color: rgba(255, 0, 0, 0.5);
     font-size: 50px; /* Reduced background text size */
     font-family: "PunchGradientItalic";
     pointer-events: none;
@@ -92,6 +88,8 @@ margin-top: 5px;
 .facilities-section {
     background-color: black;
     background-image: url(../img/bg1.png);
+    background-position-x: right;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     min-height: 100vh;

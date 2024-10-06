@@ -1,5 +1,8 @@
 .timeline-section {
     background-color: #000; /* Black background color */
+    background-image: url(../img/bg.png);
+    background-position-x: left;
+    background-repeat: no-repeat;
     color: white;
     font-family: 'Arial', sans-serif; /* Default fallback font */
 }
@@ -159,7 +162,6 @@
     left: 50%;
     top: 40%; /* Center vertically */
     transform: translate(-50%, -50%); /* Adjust for centering */
-    color: rgba(255, 0, 0, 0.5); /* Red color for background text */
     font-size: 270px; /* Use viewport width for responsive sizing */
     font-family: 'PunchGradientItalic'; /* Use the custom font for background text */
     pointer-events: none; /* Ignore mouse events */

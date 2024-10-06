@@ -10,10 +10,10 @@
     background-color: white;
     border-radius: .5rem;
     padding: 0px 5px;
-    color: orangered;
+    color: #ff1010;
 }
 .navDiv div a:hover{
-    color: orangered;
+    color: #ff1010;
 }
 .navDiv div a{
     text-decoration: none;
