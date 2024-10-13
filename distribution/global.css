@@ -9,6 +9,10 @@
 
 /* Font import from ttf files */
 @font-face {
+    font-family: "Mohave";
+    src: url("../fonts/Mohave-VariableFont_wght.ttf");
+  }
+@font-face {
     font-family: "Punch";
     src: url("../fonts/punch.ttf");
   }
@@ -29,6 +33,9 @@
     src: url('../fonts/MonomaniacOne-Regular.woff') format('truetype');
 }
 
+.mohave{
+    font-family: "Mohave";
+}
 .punch{
     font-family: "Punch";
 }
@@ -41,7 +48,9 @@
 .andmoreyregular{
     font-family: 'ANDMOREY Regular';
 }
-
+.monomaniacone{
+  font-family: 'MonomaniacOne Regular';
+}
 
 
 

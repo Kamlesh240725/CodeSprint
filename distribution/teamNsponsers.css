@@ -1,0 +1,181 @@
+  .team , .sponsors{
+    font-family: "PunchGradientItalic" ;
+  }
+  
+  .let{
+    font-family: "PunchExpand";
+  }
+  .our, .poweredBy{
+    font-family: "punch";
+    
+  }
+  
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .hidden-div {
+    display: none;
+  }
+  
+  
+  
+  
+  .team-card{
+    position: absolute;
+    /* width: 413px;
+    height: 256px; */
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+  }
+  .team-card:hover{
+    transform: rotateY(180deg);
+  }
+  .team-card .front-face,.team-card .back-face{
+    position: absolute;
+    display: grid;
+    align-content: space-around;
+    justify-items: center;
+    /* width: 413px;
+    height: 256px; */
+    background: #ffffff10;
+    /* box-shadow: 2px 2px red; */
+    /* box-shadow: -2px -2px red; */
+    /* backdrop-filter: blur(50px);  */
+    /* border-radius: 28px; */
+    /* border: 1px solid #ffffff2e; */
+    backface-visibility: hidden;
+    color: white;
+  }
+  .team-card .back-face{
+    transform: rotateY(180deg);
+    background: black;
+    border: 5px solid red;
+    -webkit-box-shadow: 0px 0px 55px -20px rgba(255,5,22,1);
+    -moz-box-shadow: 0px 0px 55px -20px rgba(255,5,22,1);
+    box-shadow: 0px 0px 55px -20px rgba(255,5,22,1);
+    
+  }
+  @media only screen and  (max-width: 800px) {
+    .boxs{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .boxs .team-card{
+      flex-shrink: 2;
+    }
+  }
+  
+  
+  
+  /* animmation */
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .wrapper {
+    
+    margin: 5rem auto;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 1) 60%,
+        rgba(0, 0, 0, 0)
+    );
+  }
+  
+  @keyframes scrollUp {
+    to {
+        top: -100%; /* Adjust based on item height */
+    }
+  }
+  
+  @keyframes scrollDown {
+    to {
+        top: 190%; /* Adjust based on item height */
+    }
+  }
+  
+  @keyframes scrollLeft {
+    to {
+      /* left: -260%; */
+      /* left: -100px; */
+      left: -1850px;
+    }
+  }
+  
+  @keyframes scrollRight {
+    to {
+      /* left: 250%; */
+      /* right: -100px; */
+      right: -1850px;
+    }
+  }
+  
+  
+  
+  .item {
+    
+    background-color: red;
+    border-radius: 6px;
+    position: absolute;
+    /* top: max(calc(100px * 8), 100%);  */
+    /* animation-name: scrollUp; */
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .item-r {
+   
+    background-color: red;
+    border-radius: 6px;
+    position: absolute;
+    /* top: -160px;  */
+    /* animation-name: scrollDown; */
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .item1 { animation-delay: calc(30s / 8 * (8 - 1) * -1); }
+  .item2 { animation-delay: calc(30s / 8 * (8 - 2) * -1); }
+  .item3 { animation-delay: calc(30s / 8 * (8 - 3) * -1); }
+  .item4 { animation-delay: calc(30s / 8 * (8 - 4) * -1); }
+  .item5 { animation-delay: calc(30s / 8 * (8 - 5) * -1); }
+  .item6 { animation-delay: calc(30s / 8 * (8 - 6) * -1); }
+  .item7 { animation-delay: calc(30s / 8 * (8 - 7) * -1); }
+  .item8 { animation-delay: calc(30s / 8 * (8 - 8) * -1); }
+  
+  
+  @media (max-width: 635px) {
+    
+    .item {
+      animation-name: scrollLeft;
+      left: max(calc(100px * 8), 100%); 
+    }
+  
+    .item-r{
+      animation-name: scrollRight;
+      right: max(calc(100px * 8), 100%); 
+    }
+  }
+  
+  @media only screen and (min-width: 641px) {
+  
+  .item {
+      animation-name: scrollUp;
+      top: max(calc(100px * 8), 100%); 
+       }
+  .item-r{
+      animation-name: scrollDown;
+      top: -160px; 
+       }
+  }

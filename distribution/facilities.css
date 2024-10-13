@@ -1,101 +1,173 @@
-
-.header {
+.facilities-header {
     position: relative;
-    margin-top: 20px; /* Reduced space above */
+    margin-top: 15px;
     text-align: center;
     z-index: 2;
-    padding: 10px 0; /* Reduced padding for header */
+    padding: 15px 0;
 }
 
-.header .background-text {
+.facilities-header .fac-background-text {
     position: absolute;
-    margin-top: 5px; 
     left: 0;
-    top: 30%; /* Adjusted top position to reduce space */
+    top: 30%;
     transform: translateY(-50%);
+    color: rgba(255, 0, 0, 0.5);
+    font-size: 220px;
     font-family: "PunchGradientItalic";
     pointer-events: none;
     text-align: center;
     width: 100%;
     white-space: nowrap;
     z-index: 1;
-letter-spacing: 30px;
 }
 
-.header .title {
-margin-top: 15px;
+.facilities-header .fac-title {
     position: relative;
     z-index: 2;
-    top: 0px; /* Reduced space between background text and title */
+    top: -20px;
     color: white;
+    font-size: 70px;
     font-family: 'ANDMOREY Regular';
-    padding: 10px 0; /* Reduced padding for title */
+    padding: 10px 0;
     background-color: transparent;
     white-space: nowrap;
-    letter-spacing: 10px; /* Added letter-spacing */
 }
 
-.card {
-    width: 100%; /* Use full width */
-    max-width: 250px; /* Limit maximum width */
-    height: 150px; /* Reduced height */
-    margin: 3px auto; /* Reduced margin */
+.fac-card {
+    width: 100%;
+    max-width: 250px;
+    height: 150px;
+    margin: 5px auto;
     background-color: black;
     color: white;
     border: 4px solid white;
     border-radius: 15px;
-    position: relative; /* Needed for overlapping title */
+    position: relative;
 }
 
-.card-img-top {
-    height: 90px; /* Reduced image height */
+.fac-card-img-top {
+    height: 90px;
     object-fit: cover;
 }
 
-.title-container {
+.fac-title-container {
     position: relative;
     margin-bottom: 0px;
-    margin-top: -2px; /* Reduced space above the card title */
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
-.title-container .title-box {
-margin-top: 5px;
+.fac-title-container .fac-title-box {
     top: 150%;
     position: relative;
     z-index: 2;
+    margin-top: 7px;
     color: white;
-    font-size: 30px; /* Reduced font size */
+    font-size: 30px;
     font-family: 'ANDMOREY Regular';
     padding: 5px;
     text-align: center;
     background-color: transparent;
-    letter-spacing: 2px; /* Added letter-spacing */
 }
 
-.title-container .background-text {
+.fac-title-container .fac-background-text {
     position: absolute;
     left: 0px;
     top: 30%;
     transform: translateY(-50%);
-    font-size: 50px; /* Reduced background text size */
+    color: rgba(255, 0, 0, 0.5);
+    font-size: 50px;
     font-family: "PunchGradientItalic";
     pointer-events: none;
     text-align: center;
     width: 100%;
-    letter-spacing: 10px; /* Added letter-spacing */
 }
 
-.facilities-section {
+body {
     background-color: black;
-    background-image: url(../img/bg1.png);
-    background-position-x: right;
+    background-image: url('bg1.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    overflow-y: hidden; /* Disabled scrolling */
+    overflow-y: hidden;
 }
 
-.container {
-    padding: 0;
+.fac-container {
+    padding: 10px 0; /* Add some padding on top and bottom */
+}
+
+/* Mobile responsive design */
+@media (max-width: 576px) {
+    .facilities-header .fac-background-text {
+        font-size: 100px; /* Adjust for smaller screens */
+    }
+
+    .facilities-header .fac-title {
+        font-size: 40px; /* Adjust for smaller screens */
+    }
+
+    .fac-card {
+        max-width: 100%; /* Full width for mobile */
+        height: auto;
+    }
+
+    .fac-card-img-top {
+        height: auto; /* Allow image to scale */
+        width: 100%; /* Full width for image */
+    }
+
+    .fac-title-container .fac-title-box {
+        font-size: 20px; /* Adjust font for mobile */
+    }
+
+    .fac-title-container .fac-background-text {
+        font-size: 30px; /* Adjust for smaller screens */
+    }
+
+    /* Two-column layout for mobile */
+    .col-6 {
+        margin-bottom: 25px; /* Adjust margin between fac-cards to 15px */
+        padding: 0 5px; /* Small padding between columns */
+    }
+
+    .fac-container {
+        padding: 0 15px; /* Padding on left and right of container */
+    }
+}
+
+@media (min-width: 577px) {
+    .facilities-header .fac-background-text {
+        letter-spacing: 10px; /* Add letter spacing for larger screens */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .facilities-header .fac-background-text {
+        font-size: 150px; /* Tablet adjustments */
+    }
+
+    .facilities-header .fac-title {
+        font-size: 60px;
+    }
+
+    .fac-card {
+        max-width: 85%;
+    }
+
+    .fac-card-img-top {
+        height: auto;
+        width: 100%;
+    }
+
+    .fac-title-container .fac-title-box {
+        font-size: 25px;
+    }
+
+    .fac-title-container .fac-background-text {
+        font-size: 35px;
+    }
 }

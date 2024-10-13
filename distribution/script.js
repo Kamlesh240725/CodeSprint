@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     delay:0,
                     duration:0.005
                 })
-                console.log("rotateback")
             });
 
             // If the clicked button was not active, add the active class
@@ -48,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     delay:0,
                     duration:0.005
                 })
-                console.log("rotate")
             }
         });
     });

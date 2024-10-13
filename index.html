@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./distribution/global.css" />
     <link rel="stylesheet" href="./distribution/timeline.css" />
     <link rel="stylesheet" href="./distribution/mainpage.css" />
-    <link rel="stylesheet" href="./distribution/facilities.css">
+    <link rel="stylesheet" href="./distribution/facilities.css" />
+    <link rel="stylesheet" href="./distribution/teamNsponsers.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Bootstrap CSS -->
     <link
@@ -17,35 +18,27 @@
     />
   </head>
   <body class="font-normal bg-black">
-    <div class="frame absolute">
+    <div class="frame absolute h-full">
       <div
-        class="outerframe absolute top-0 h-[100vh] w-[100vw] border-[10px] border-solid border-white"
+        class="outerframe absolute top-0 h-full w-screen border-[8px] sm:border-[12px] lg:border-[16px] border-solid border-white"
       ></div>
       <div
-        class="innerframe absolute top-0 rounded-[25px] overflow-y-scroll overflow-x-clip h-[100vh] w-[100vw] border-[10px] border-solid border-white"
+        class="innerframe absolute top-0 rounded-[25px] overflow-y-scroll overflow-x-clip h-full w-screen border-[8px] sm:border-[12px] lg:border-[16px] border-solid border-white"
       >
         <!-- Sticky Navbar -->
         <nav class="h-[50px] flex items-top fixed z-[15] w-full bg-none">
-          <div class="navLeft w-[5%] bg-white h-[49.2px] rounded-br-3xl">
-            <img
-              class="absolute top-[-14px] left-[38px] w-[87px]"
-              src="./img/frame left corner.png"
-              alt=""
-            />
-            <img
-              class="absolute top-[28px] left-[-18px] w-[45px]"
-              src="./img/frame left corner bottom.png"
-              alt=""
-            />
-          </div>
+          <!-- <div
+            class="navLeft w-[5%] bg-none h-[35px] lg:h-[62px] rounded-br-3xl"
+          ></div> -->
           <div
-            class="navDiv w-[45%] h-[50px] flex items-center justify-between text-2xl font-semibold"
+            class="navDiv sm:w-[45%] md:w-[860px] 2xl:w-[800px] md:pl-[6rem] md:pr-[1.3rem] h-[50px] flex items-center justify-between text-2xl font-semibold text-[15px] sm:text-[28px] text-red-600"
+            z-[-5]a
           >
             <div class="nav-link active">
               <a href="#home" class=""> HOME </a>
             </div>
             <div class="nav-link">
-              <a href="#" class=""> PARTNERS </a>
+              <a href="#partners" class=""> PARTNERS </a>
             </div>
             <div class="nav-link">
               <a href="#prizes" class=""> PRIZES </a>
@@ -54,145 +47,171 @@
               <a href="#faqs" class=""> FAQS </a>
             </div>
             <div class="nav-link">
-              <a href="#" class=""> CONTACT </a>
+              <a href="#contact" class=""> CONTACT </a>
             </div>
           </div>
-          <div class="navRight w-[50%] h-[49.2px] bg-white rounded-bl-3xl">
-            <img
-              class="absolute top-[-14.9px] right-[725px] w-[95px]"
-              src="./img/frame right corner.png"
-              alt=""
-            />
-            <img
-              class="absolute top-[28px] right-[1.8px] w-[45px]"
-              src="./img/frame right corner bottom.png"
-              alt=""
-            />
-          </div>
+          <div
+            class="navRight sm:w-[50%] h-[35px] lg:h-[62px] rounded-bl-3xl"
+          ></div>
         </nav>
         <!-- Title Page -->
         <div
-          id="home" class="titlePage container h-[calc(100vh-20px)] bg-gray-900 static"
+          id="home"
+          class="title-page w-full h-full bg-black grid grid-rows-[auto_auto_min(calc(31.45vw - 16px),130px)] md:grid-rows-[10vw_auto_13vw]"
         >
-          <div class="h-[calc(100vh-20px)] w-full bg-black" id="img-container">
-            <img
-              class="relative titlePageBG w-[199%] left-[-1117px] top-[-767px] opacity-85"
-              src="./img/hackathon bg.png"
-              alt=""
-            />
-            <img src="./img/Hero Logo.png" class="logo" alt="" />
-            <img src="./img/Group 334.png" class="infoBox" alt="" />
-            <img
-              src="./img/Register Btn.png"
-              class="regbtm absolute bottom-[-2px] left-[-15px]"
-              alt=""
-            />
+          <img src="./img/Hero Logo.svg" class="m-auto scale-[0.6] pt-[6%]" />
+          <div class="infoNsponsers md:flex md:items-end relative">
+            <div
+              class="infobox w-full md:w-5/12 mx-auto md:block flex justify-center"
+            >
+              <div
+                class="info flex flex-col justify-center items-center text-center text-white text-[16px] monomaniacone w-[75%] md:w-full rounded-[16px]"
+              >
+                <div
+                  class="info-wrapper bg-black p-[0.5rem] rounded-[12px] border-white border-solid border-[4px]"
+                >
+                  <p>
+                    Gear up for a marathon of innovation at the 36-hour
+                    Hackathon hosted by GEC Patan and GDG Gandhinagar on January
+                    26-27. Whether you're a Newbie or a Seasoned Coder, join us
+                    for an electrifying experience with workshops, mentorship,
+                    and prizes up for grabs!
+                  </p>
+                  <p>Register now and bring your A-game.</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="title-sponsers relative md:absolute md:right-[1.2rem] md:bottom-[1.2rem] bottom-[-2rem] flex md:flex-col w-full md:w-fit justify-content-around gap-y-4"
+            >
+              <div
+                class="title-sponser w-[144px] h-[54px] md:w-[208px] md:h-[78px] bg-white rounded-[10px] md:rounded-[14.44px] flex items-center justify-center monomaniacone text-[20px] md:text-[27.44px]"
+              >
+                TITLE SPONSER
+              </div>
+              <div
+                class="devfolio w-[144px] h-[54px] md:w-[208px] md:h-[78px] bg-white rounded-[10px] md:rounded-[14.44px] flex items-center justify-center"
+              >
+                <img src="./img/Devfolio.svg" class="w-[33px] md:w-[47.67px]" />
+              </div>
+            </div>
           </div>
+          <img
+            src="./img/Register Part mobile.svg"
+            class="w-full md:hidden flex self-end"
+          />
+          <img
+            src="./img/Register Part.svg"
+            class="w-full hidden md:flex self-end"
+          />
         </div>
         <!-- Facilities Page -->
-         <div class="facilities-section pt-[6rem] pb-[0.7rem]">
-
-           <header class="header">
-             <div class="background-text text-[8rem] text-red-600">Facilities</div>
-             <div class="title text-[3.2rem]">Code Sprint</div>
+         <div class="facilities-section h-[100vh] bg-black px-[10vh] pt-20">
+           <header class="facilities-header">
+             <div class="fac-background-text">Facilities</div>
+             <div class="fac-title">Code Sprint</div>
             </header>
-            <div class="container">
+            
+            <div class="fac-container mt-2">
               <div class="row justify-content-center">
-                <div class="col-md-4 col-sm-6 pt-[2rem]">
-                  <div class="title-container">
-                    <span class="background-text text-red-600">Delicious</span>
-                    <div class="title-box">Food</div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="fac-title-container">
+                    <span class="fac-background-text">Delicious</span>
+                    <div class="fac-title-box">Food</div>
                   </div>
-                  <div class="card">
+                  <div class="fac-card">
                     <img
                     src="https://via.placeholder.com/204x102"
                     class="card-img-top"
-                    alt="Card Image 1"
+                    alt="fac-Card Image 1"
                     />
-                    <div class="card-body"></div>
+                    <div class="fac-card-body"></div>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 pt-[2rem]">
-                  <div class="title-container">
-                    <span class="background-text text-red-600">Luxurious</span>
-                    <div class="title-box">Resting</div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="fac-title-container">
+                    <span class="fac-background-text">Luxurious</span>
+                    <div class="fac-title-box">Resting</div>
                   </div>
-                  <div class="card">
+                  <div class="fac-card">
                     <img
                     src="https://via.placeholder.com/204x102"
                     class="card-img-top"
-                    alt="Card Image 2"
+                    alt="fac-Card Image 2"
                     />
-                    <div class="card-body"></div>
+                    <div class="fac-card-body"></div>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 pt-[2rem]">
-                  <div class="title-container">
-                    <span class="background-text text-red-600">Sharp</span>
-                    <div class="title-box">Judges</div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="fac-title-container">
+                    <span class="fac-background-text">Sharp</span>
+                    <div class="fac-title-box">Judges</div>
                   </div>
-                  <div class="card">
+                  <div class="fac-card">
                     <img
                     src="https://via.placeholder.com/204x102"
                     class="card-img-top"
-                    alt="Card Image 3"
+                    alt="fac-Card Image 3"
                     />
-                    <div class="card-body"></div>
+                    <div class="fac-card-body"></div>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 pt-[2rem]">
-              <div class="title-container">
-                <span class="background-text text-red-600">Show</span>
-                <div class="title-box">Stage</div>
-              </div>
-              <div class="card">
-                <img
-                src="https://via.placeholder.com/204x102"
-                class="card-img-top"
-                alt="Card Image 4"
-                />
-                <div class="card-body"></div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="fac-title-container">
+                    <span class="fac-background-text">Show</span>
+                    <div class="fac-title-box">Stage</div>
+                  </div>
+                  <div class="fac-card">
+                    <img
+                    src="https://via.placeholder.com/204x102"
+                    class="card-img-top"
+                    alt="fac-Card Image 4"
+                    />
+                    <div class="fac-card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="fac-title-container">
+                    <span class="fac-background-text">Fun</span>
+                    <div class="fac-title-box">Games</div>
+                  </div>
+                  <div class="fac-card">
+                    <img
+                    src="https://via.placeholder.com/204x102"
+                    class="card-img-top"
+                    alt="fac-Card Image 5"
+                    />
+                    <div class="fac-card-body"></div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-6">
+                  <div class="fac-title-container">
+                    <span class="fac-background-text">Exciting</span>
+                    <div class="fac-title-box">Workshops</div>
+                  </div>
+                  <div class="fac-card">
+                    <img
+                    src="https://via.placeholder.com/204x102"
+                    class="card-img-top"
+                    alt="fac-Card Image 6"
+                    />
+                    <div class="fac-card-body"></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 pt-[2rem]">
-              <div class="title-container">
-                <span class="background-text text-red-600">Fun</span>
-                <div class="title-box">Games</div>
-              </div>
-              <div class="card">
-                <img
-                src="https://via.placeholder.com/204x102"
-                class="card-img-top"
-                alt="Card Image 5"
-                />
-                <div class="card-body"></div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 pt-[2rem]">
-              <div class="title-container">
-                <span class="background-text text-red-600">Cool</span>
-                <div class="title-box">Goodies</div>
-              </div>
-              <div class="card">
-                <img
-                src="https://via.placeholder.com/204x102"
-                class="card-img-top"
-                alt="Card Image 6"
-                />
-                <div class="card-body"></div>
-              </div>
-            </div>
+            
           </div>
-        </div>
-      </div>
-        
-        <!-- TimeLine Page   -->
-        <div class="timeline-section h-[100vh] pt-[5rem] mb-[1.2rem]">
-          <div class="title-container pt-[10rem]">
-            <span class="background-text-timeline-section text-[10rem] text-red-600">Time Line </span>
-            <div class="title-box">CODE SPRINT</div>
-          </div>
-          
+            <!-- TimeLine Page   -->
+            <div class="timeline-section h-[100vh] pt-[5rem] mb-[1.2rem]">
+              <div class="title-container pt-[10rem]">
+                <span
+                class="background-text-timeline-section text-[10rem] text-red-600"
+                >Time Line
+              </span>
+              <div class="title-box">CODE SPRINT</div>
+            </div>
+
           <!-- timeline blocks with Horizontal Scrolling -->
           <div class="container">
             <div class="timeline-blocks w-[90vw] m-auto" id="timelineBlocks">
@@ -407,6 +426,210 @@
             </div>
           </div>
         </div>
+        <!-- Our Team -->
+         <div class="our-team">
+
+           <div class="team bg-black overflow-auto sm:h-[110vh] h-[100%]  md:min-w-[700px] ">
+             <div class=" h-[20vh] w-full flex flex-col items-center justify-center">
+               
+               <div class="team text-orange-700 sm:text-[8rem] text-[6rem]  relative sm:top-[50px] top-[30px]">T E A M </div>
+               
+               <div class="let uppercase text-white sm:text-[4.5rem] text-[3rem]  relative sm:top-[-55px] top-[-50px]">Let's Know Our</div>  
+              </div>
+              
+              <div class="boxs  sm:h-[80vh] h-auto  inline-grid grid-cols-2 sm:grid-cols-[calc(226px*0.667)_calc(226px*0.667)_calc(226px*0.667)] justify-evenly md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 justify-items-center w-full font-serif  gap-y-10 mt-6 px-2 sm:px-10 ">
+                
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 1.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 2.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 3.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 8.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 4.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 5.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 9.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 6.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 19.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                  <img src="./img/img_team/devin 7.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                    hii
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+        <!-- Our Sponsors -->
+            <div class="our-sponsers">
+              <div class="bg-black h-[100vh] w-[100vw] text-white flex sm:flex-row flex-col justify-between overflow-hidden ">
+        
+                <div class="sm:w-[40%] sm:h-full w-[100%] h-[60%] flex flex-col">
+                    <div class="sponsors sm:h-[40%] flex flex-col justify-center items-center">
+                        <div class="text-red-700 md:text-8xl sm:text-7xl text-8xl relative top-6  sm:relative md:top-6">S P O N S</div>
+                        <div class="text-red-700 md:text-8xl sm:text-7xl text-8xl"><span class="our text-white">OUR</span>O R S</div>
+                    </div>
+                    <div class="sm:h-[60%] h-[70%] flex flex-col sm:justify-center items-center mb-5 sm:mt-0">
+                        <div class="poweredBy  text-white md:text-5xl sm:text-4xl text-3xl h-[20%] w-[80%] rounded-xl flex sm:justify-center justify-start items-center uppercase  ">title Sponsor</div>
+                        <div class="bg-white h-[27%] w-[78%] rounded-xl"></div>
+                        <div class="poweredBy  text-white md:text-5xl sm:text-4xl text-3xl h-[20%] w-[80%] rounded-xl flex sm:justify-center justify-start items-center z-10">POWERED BY</div>
+                        <div class="bg-white h-[27%] w-[78%] rounded-xl"></div>
+                    </div>
+                </div>
+                <div class=" sm:h-[100%] sm:w-[60%] h-[22rem] w-[100%]  sm:rotate-[10deg] flex sm:flex-row flex-col justify-between sm:justify-around">
+        
+                   
+                    <div class="  sm:overflow-y-auto    sm:min-w-[45%] sm:h-[100%] min-h-40 min-w-[100%] flex sm:flex-col flex-row    sm:items-center sm:gap-y-14 gap-x-10">
+                        <div class="item item1 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                        <div class="item item2 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                        <div class="item item3 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                        <div class="item item4 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                        <div class="item item5 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                        <div class="item item6 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                        <div class="item item7 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                        <div class="item item8 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                     </div>
+                    
+                        <div class="  sm:overflow-y-auto    sm:min-w-[45%] sm:h-[100%] min-h-40 min-w-[100%] flex sm:flex-col flex-row items-center   sm:items-center sm:gap-y-14 sm:gap-x-0 gap-x-10 mt-2">
+                            <div class="item-r item1 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                            <div class="item-r item2 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                            <div class="item-r item3 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                            <div class="item-r item4 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                            <div class="item-r item5 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                            <div class="item-r item6 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                            <div class="item-r item7 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                            <div class="item-r item8 sm:min-w-[40%] min-w-[19rem]  min-h-40 bg-white rounded-3xl sm:border-x-[1rem] border-y-[1rem] sm:border-y-0  border-red-700 text-white"></div>
+                    
+                        </div>
+                </div>
+        
+             
+            </div>
+            </div>
+        
+        <!-- Footer -->
+        <footer>
+          <div
+            class="social-media-handles bg-none md:flex justify-end pr-[4rem] gap-[2rem] pt-[2rem] hidden"
+          >
+            <img src="./img/WhatsApp Vector.svg" class="w-[43px]" />
+            <img src="./img/LinkedIn Vector.svg" class="w-[43px]" />
+            <img src="./img/Instagram Vector.svg" class="w-[43px]" />
+          </div>
+          <div
+            class="footer-info w-full bg-white md:rounded-tl-[30%] rounded-none inline-grid grid-cols-4 justify-around justify-items-left uppercase gap-y-[2rem] md:pt-[2rem] pt-[2.5rem] md:border-none border-t-[20px] border-solid border-red-600"
+          >
+            <img
+              src="./img/Footer college Logo.svg"
+              alt=""
+              class="w-[280px] h-[280px] justify-self-center"
+            />
+            <div
+              class="quick-links md:justify-self-left justify-self-center flex flex-col items-center md:block"
+            >
+              <p class="text-[50px] monomaniacone">Quick Links</p>
+              <ul
+                class="text-[25px] mohave flex flex-col items-center md:block"
+              >
+                <li>Problem Statements</li>
+                <li>Our Sponsors</li>
+                <li>Community Partners</li>
+              </ul>
+            </div>
+            <div
+              class="about-us md:justify-self-left justify-self-center flex flex-col items-center md:block"
+            >
+              <p class="text-[50px] monomaniacone">About Us</p>
+              <ul
+                class="text-[25px] mohave flex flex-col items-center md:block"
+              >
+                <li>Team</li>
+                <li>Code of conduct</li>
+              </ul>
+            </div>
+            <div
+              id="contact"
+              class="contact md:justify-self-left justify-self-center flex flex-col items-center md:block"
+            >
+              <p class="text-[50px] monomaniacone">Contact</p>
+              <ul
+                class="text-[25px] mohave flex flex-col items-center md:block"
+              >
+                <li>codesprint@gecpatan.ac.in</li>
+                <li>contact member: +91 12345 67890</li>
+                <li>contact member: +91 12345 67890</li>
+              </ul>
+            </div>
+            .
+          </div>
+          <div
+            class="social-media-handles bg-white flex justify-center gap-[2rem] pb-[2rem] md:hidden"
+          >
+            <img src="./img/Instagram Vector.svg" alt="" class="w-[2rem]" />
+            <img src="./img/Twitter Vector.svg" alt="" class="w-[2rem]" />
+            <img src="./img/LinkedIn Vector.svg" alt="" class="w-[2rem]" />
+            <img src="./img/WhatsApp Vector.svg" alt="" class="w-[2rem]" />
+          </div>
+          <div
+            class="footer-branding bg-white flex flex-col items-center text-black"
+          >
+            <img
+              src="./img/footer branding.png"
+              class="w-[90vw] pb-[2rem]"
+              alt=""
+            />
+            <div class="hr h-[3px] w-[90vw] bg-red-600"></div>
+            <p
+              class="uppercase mohave flex flex-col items-center sm:block text-[1em] md:text-[1.5em] lg:text-[2em] pt-[1rem]"
+            >
+              <span>Copyright © 2024 CodeSprint</span>
+              <span>(Government engineering college, patan)</span>
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
