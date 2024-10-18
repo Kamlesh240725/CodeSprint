@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Code Sprint - GEC Patan</title>
     <link rel="stylesheet" href="./distribution/style.css" />
     <link rel="stylesheet" href="./distribution/global.css" />
     <link rel="stylesheet" href="./distribution/timeline.css" />
@@ -26,7 +26,7 @@
         class="innerframe absolute top-0 rounded-[25px] overflow-y-scroll overflow-x-clip h-full w-screen border-[8px] sm:border-[12px] lg:border-[16px] border-solid border-white"
       >
         <!-- Sticky Navbar -->
-        <nav class="h-[50px] flex items-top fixed z-[15] w-full bg-none">
+        <nav class="hidden nav-pc h-[50px] sm:flex items-top fixed z-[15] w-full bg-none">
           <!-- <div
             class="navLeft w-[5%] bg-none h-[35px] lg:h-[62px] rounded-br-3xl"
           ></div> -->
@@ -34,25 +34,71 @@
             class="navDiv sm:w-[45%] md:w-[860px] 2xl:w-[800px] md:pl-[6rem] md:pr-[1.3rem] h-[50px] flex items-center justify-between text-2xl font-semibold text-[15px] sm:text-[28px] text-red-600"
             z-[-5]a
           >
-            <div class="nav-link active">
-              <a href="#home" class=""> HOME </a>
-            </div>
-            <div class="nav-link">
-              <a href="#partners" class=""> PARTNERS </a>
-            </div>
-            <div class="nav-link">
-              <a href="#prizes" class=""> PRIZES </a>
-            </div>
-            <div class="nav-link">
-              <a href="#faqs" class=""> FAQS </a>
-            </div>
-            <div class="nav-link">
-              <a href="#contact" class=""> CONTACT </a>
-            </div>
+              <div class="nav-link active">
+                  <a href="#home" class=""> HOME </a>
+              </div>
+              <div class="nav-link">
+                  <a href="#partners" class=""> PARTNERS </a>
+              </div>
+              <div class="nav-link">
+                  <a href="#prizes" class=""> PRIZES </a>
+              </div>
+              <div class="nav-link">
+                  <a href="#faqs" class=""> FAQS </a>
+              </div>
+              <div class="nav-link">
+                  <a href="#contact" class=""> CONTACT </a>
+              </div>
           </div>
           <div
             class="navRight sm:w-[50%] h-[35px] lg:h-[62px] rounded-bl-3xl"
           ></div>
+        </nav>
+        <nav class="sm:hidden nav-mobile h-[50px] flex items-top fixed z-[15] w-full bg-none"> 
+
+          <div
+          class="navDiv w-[155px] md:w-[860px] h-[50px] flex items-center justify-between text-2xl font-semibold text-[15px] sm:text-[28px] text-red-600"
+          z-[-5]a
+        x>
+
+            <div class="nav-links-lower text-white">
+              <div class="nav-links-lower-scrollWrapper flex">
+                <div class="white-nav-link text-[24px] w-[115px] h-full pt-[0.4rem] pl-[0.70rem] flex justify-center items-center  ">
+                  <a href="#" class=""> HOME </a>
+                </div>
+                <div class="white-nav-link text-[20px] w-[115px] h-full pt-[0.4rem] pl-[0.70rem] flex justify-center items-center  ">
+                  <a href="#" class=""> PARTNERS </a>
+                </div>
+                <div class="white-nav-link text-[22px] w-[115px] h-full pt-[0.4rem] pl-[0.70rem] flex justify-center items-center  ">
+                  <a href="#" class=""> PRIZES </a>
+                </div>
+                <div class="white-nav-link text-[22px] w-[115px] h-full pt-[0.4rem] pl-[0.70rem] flex justify-center items-center  ">
+                  <a href="#" class=""> FAQS </a>
+                </div>
+                <div class="white-nav-link text-[22px] w-[115px] h-full pt-[0.4rem] pl-[0.70rem] flex justify-center items-center  ">
+                  <a href="#" class=""> CONTACT </a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div
+          class="navRight w-[calc(100%-170px)] sm:w-[50%] h-[35px] lg:h-[62px] rounded-bl-3xl overflow-clip z-[1]"
+        >
+            <div class="nav-links-upper flex gap-2 monomaniacone overflow-clip w-[230px] h-full">
+              <div class="main-navlinks flex gap-2 h-full">
+                <div class="nav-link-mobile text-red-600 partners"> PARTNERS </div>
+                <div class="nav-link-mobile text-red-600 prizes"> PRIZES </div>
+                <div class="nav-link-mobile text-red-600 faqs"> FAQS </div>
+                <div class="nav-link-mobile text-red-600 contact"> CONTACT </div>
+              </div>
+              <div class="extra-navlinks flex gap-2 w-auto">
+                <div class="nav-link-mobile text-red-600 home"> HOME </div>
+                <div class="nav-link-mobile text-red-600 partners"> PARTNERS </div>
+                <div class="nav-link-mobile text-red-600 prizes"> PRIZES </div>
+                <div class="nav-link-mobile text-red-600 faqs"> FAQS </div>
+              </div>
+            </div>
+        </div>
         </nav>
         <!-- Title Page -->
         <div
@@ -107,100 +153,76 @@
         </div>
         <!-- Facilities Page -->
          <div class="facilities-section h-[100vh] bg-black px-[10vh] pt-20">
-           <header class="facilities-header">
-             <div class="fac-background-text">Facilities</div>
-             <div class="fac-title">Code Sprint</div>
-            </header>
-            
-            <div class="fac-container mt-2">
-              <div class="row justify-content-center">
+          <header class="fac-header">
+            <div class="fac-background-text">Facilities</div>
+            <div class="fac-title">Code Sprint</div>
+        </header>
+        
+        <div class="fac-container mt-2">
+            <div class="row justify-content-center">
                 <div class="col-md-4 col-sm-6 col-6">
-                  <div class="fac-title-container">
-                    <span class="fac-background-text">Delicious</span>
-                    <div class="fac-title-box">Food</div>
-                  </div>
-                  <div class="fac-card">
-                    <img
-                    src="https://via.placeholder.com/204x102"
-                    class="card-img-top"
-                    alt="fac-Card Image 1"
-                    />
-                    <div class="fac-card-body"></div>
-                  </div>
+                    <div class="fac-title-container">
+                        <span class="fac-background-text">Delicious</span>
+                        <div class="fac-title-box">Food</div>
+                    </div>
+                    <div class="fac-card">
+                        <img src="https://via.placeholder.com/204x102" class="fac-card-img-top" alt="fac-card Image 1">
+                        <div class="fac-card-body"></div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                  <div class="fac-title-container">
-                    <span class="fac-background-text">Luxurious</span>
-                    <div class="fac-title-box">Resting</div>
-                  </div>
-                  <div class="fac-card">
-                    <img
-                    src="https://via.placeholder.com/204x102"
-                    class="card-img-top"
-                    alt="fac-Card Image 2"
-                    />
-                    <div class="fac-card-body"></div>
-                  </div>
+                    <div class="fac-title-container">
+                        <span class="fac-background-text">Luxurious</span>
+                        <div class="fac-title-box">Resting</div>
+                    </div>
+                    <div class="fac-card">
+                        <img src="https://via.placeholder.com/204x102" class="fac-card-img-top" alt="fac-card Image 2">
+                        <div class="fac-card-body"></div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                  <div class="fac-title-container">
-                    <span class="fac-background-text">Sharp</span>
-                    <div class="fac-title-box">Judges</div>
-                  </div>
-                  <div class="fac-card">
-                    <img
-                    src="https://via.placeholder.com/204x102"
-                    class="card-img-top"
-                    alt="fac-Card Image 3"
-                    />
-                    <div class="fac-card-body"></div>
-                  </div>
+                    <div class="fac-title-container">
+                        <span class="fac-background-text">Sharp</span>
+                        <div class="fac-title-box">Judges</div>
+                    </div>
+                    <div class="fac-card">
+                        <img src="https://via.placeholder.com/204x102" class="fac-card-img-top" alt="fac-card Image 3">
+                        <div class="fac-card-body"></div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                  <div class="fac-title-container">
-                    <span class="fac-background-text">Show</span>
-                    <div class="fac-title-box">Stage</div>
-                  </div>
-                  <div class="fac-card">
-                    <img
-                    src="https://via.placeholder.com/204x102"
-                    class="card-img-top"
-                    alt="fac-Card Image 4"
-                    />
-                    <div class="fac-card-body"></div>
-                  </div>
+                    <div class="fac-title-container">
+                        <span class="fac-background-text">Show</span>
+                        <div class="fac-title-box">Stage</div>
+                    </div>
+                    <div class="fac-card">
+                        <img src="https://via.placeholder.com/204x102" class="fac-card-img-top" alt="fac-card Image 4">
+                        <div class="fac-card-body"></div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                  <div class="fac-title-container">
-                    <span class="fac-background-text">Fun</span>
-                    <div class="fac-title-box">Games</div>
-                  </div>
-                  <div class="fac-card">
-                    <img
-                    src="https://via.placeholder.com/204x102"
-                    class="card-img-top"
-                    alt="fac-Card Image 5"
-                    />
-                    <div class="fac-card-body"></div>
-                  </div>
+                    <div class="fac-title-container">
+                        <span class="fac-background-text">Fun</span>
+                        <div class="fac-title-box">Games</div>
+                    </div>
+                    <div class="fac-card">
+                        <img src="https://via.placeholder.com/204x102" class="fac-card-img-top" alt="fac-card Image 5">
+                        <div class="fac-card-body"></div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-6">
-                  <div class="fac-title-container">
-                    <span class="fac-background-text">Exciting</span>
-                    <div class="fac-title-box">Workshops</div>
-                  </div>
-                  <div class="fac-card">
-                    <img
-                    src="https://via.placeholder.com/204x102"
-                    class="card-img-top"
-                    alt="fac-Card Image 6"
-                    />
-                    <div class="fac-card-body"></div>
-                  </div>
+                    <div class="fac-title-container">
+                        <span class="fac-background-text">Exciting</span>
+                        <div class="fac-title-box">Workshops</div>
+                    </div>
+                    <div class="fac-card">
+                        <img src="https://via.placeholder.com/204x102" class="fac-card-img-top" alt="fac-card Image 6">
+                        <div class="fac-card-body"></div>
+                    </div>
                 </div>
-              </div>
             </div>
-            
+        </div>
+        
           </div>
             <!-- TimeLine Page   -->
             <div class="timeline-section h-[100vh] pt-[5rem] mb-[1.2rem]">
@@ -428,75 +450,100 @@
         </div>
         <!-- Our Team -->
          <div class="our-team">
-
-           <div class="team bg-black overflow-auto sm:h-[110vh] h-[100%]  md:min-w-[700px] ">
-             <div class=" h-[20vh] w-full flex flex-col items-center justify-center">
-               
-               <div class="team text-orange-700 sm:text-[8rem] text-[6rem]  relative sm:top-[50px] top-[30px]">T E A M </div>
-               
+           <div class="team bg-black  md:overflow-auto sm:h-[110vh] h-[100%]  md:min-w-[700px] ">
+              <div class=" h-[20vh] w-full flex flex-col items-center justify-center">
+               <div class="team text-red-600 sm:text-[8rem] text-[6rem]  relative sm:top-[50px] top-[30px]">T E A M </div>
                <div class="let uppercase text-white sm:text-[4.5rem] text-[3rem]  relative sm:top-[-55px] top-[-50px]">Let's Know Our</div>  
-              </div>
-              
+              </div> 
               <div class="boxs  sm:h-[80vh] h-auto  inline-grid grid-cols-2 sm:grid-cols-[calc(226px*0.667)_calc(226px*0.667)_calc(226px*0.667)] justify-evenly md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 justify-items-center w-full font-serif  gap-y-10 mt-6 px-2 sm:px-10 ">
-                
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 1.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+                <div class="team-card-wrapper">
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 1.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 2.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 2.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
+                  </div>
+                </div>  
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 3.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 3.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 8.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 8.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 4.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 4.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 5.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 5.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 9.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 9.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 6.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 6.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 19.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 19.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
-                  </div>
-                </div>
-                <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
-                  <img src="./img/img_team/devin 7.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
-                  <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
-                    hii
+                <div class="team-card-wrapper">
+
+                  <div class="team-card h-[calc(280px*0.667)] w-[calc(226px*0.667)] md:h-[280px] md:w-[226px] border-0 border-white rounded-xl text-white flex flex-wrap justify-center items-center   relative">
+                    <img src="./img/img_team/devin 7.webp" class="front-face absolute h-full w-full object-cover rounded-xl" alt="Trophy">
+                    <div class="back-face hidden-div absolute inset-0 bg-gray-800 text-center text-lg text-white border-4 rounded-xl border-red-700">
+                      hii
+                    </div>
                   </div>
                 </div>
               </div>
@@ -504,7 +551,7 @@
           </div>
             
         <!-- Our Sponsors -->
-            <div class="our-sponsers">
+            <div id="partners" class="our-sponsers">
               <div class="bg-black h-[100vh] w-[100vw] text-white flex sm:flex-row flex-col justify-between overflow-hidden ">
         
                 <div class="sm:w-[40%] sm:h-full w-[100%] h-[60%] flex flex-col">
@@ -633,6 +680,7 @@
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

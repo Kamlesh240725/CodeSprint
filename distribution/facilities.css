@@ -1,4 +1,4 @@
-.facilities-header {
+.fac-header {
     position: relative;
     margin-top: 15px;
     text-align: center;
@@ -6,14 +6,14 @@
     padding: 15px 0;
 }
 
-.facilities-header .fac-background-text {
+.fac-header .fac-background-text {
     position: absolute;
     left: 0;
     top: 30%;
     transform: translateY(-50%);
     color: rgba(255, 0, 0, 0.5);
     font-size: 220px;
-    font-family: "PunchGradientItalic";
+    font-family: 'PunchGradientItalic';
     pointer-events: none;
     text-align: center;
     width: 100%;
@@ -21,7 +21,7 @@
     z-index: 1;
 }
 
-.facilities-header .fac-title {
+.fac-header .fac-title {
     position: relative;
     z-index: 2;
     top: -20px;
@@ -77,23 +77,10 @@
     transform: translateY(-50%);
     color: rgba(255, 0, 0, 0.5);
     font-size: 50px;
-    font-family: "PunchGradientItalic";
+    font-family: 'PunchGradientItalic';
     pointer-events: none;
     text-align: center;
     width: 100%;
-}
-
-body {
-    background-color: black;
-    background-image: url('bg1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    overflow-y: hidden;
 }
 
 .fac-container {
@@ -102,11 +89,11 @@ body {
 
 /* Mobile responsive design */
 @media (max-width: 576px) {
-    .facilities-header .fac-background-text {
-        font-size: 100px; /* Adjust for smaller screens */
+    .fac-header .fac-background-text {
+        font-size: 80px; /* Adjust for smaller screens */
     }
 
-    .facilities-header .fac-title {
+    .fac-header .fac-title {
         font-size: 40px; /* Adjust for smaller screens */
     }
 
@@ -128,8 +115,8 @@ body {
         font-size: 30px; /* Adjust for smaller screens */
     }
 
-    /* Two-column layout for mobile */
-    .col-6 {
+    /* One-column layout for mobile */
+    .col-md-4, .col-sm-6, .col-6 {
         margin-bottom: 25px; /* Adjust margin between fac-cards to 15px */
         padding: 0 5px; /* Small padding between columns */
     }
@@ -140,17 +127,17 @@ body {
 }
 
 @media (min-width: 577px) {
-    .facilities-header .fac-background-text {
-        letter-spacing: 10px; /* Add letter spacing for larger screens */
+    .fac-header .fac-background-text {
+        letter-spacing: 5px; /* Add letter spacing for larger screens */
     }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
-    .facilities-header .fac-background-text {
-        font-size: 150px; /* Tablet adjustments */
+    .fac-header .fac-background-text {
+        font-size: 140px; /* Tablet adjustments */
     }
 
-    .facilities-header .fac-title {
+    .fac-header .fac-title {
         font-size: 60px;
     }
 

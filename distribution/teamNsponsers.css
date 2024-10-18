@@ -31,8 +31,16 @@
     transition: 0.5s;
     transform-style: preserve-3d;
   }
-  .team-card:hover{
-    transform: rotateY(180deg);
+
+  @media(hover :hover){
+    .team{
+      overflow-y: clip;
+    }
+    .team-card-wrapper:hover{
+      .team-card{
+        transform: rotateY(180deg);
+      }
+    }
   }
   .team-card .front-face,.team-card .back-face{
     position: absolute;

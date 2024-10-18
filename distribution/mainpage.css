@@ -46,9 +46,6 @@ nav {
     z-index: -5;
   }
 @media only screen and (max-width: 640px) {
-  body {
-    background-color: white;
-  }
   .navDiv div.active {
     background-color: transparent;
     border-radius: 0.5rem;
@@ -92,22 +89,27 @@ nav {
   }
   .navDiv {
     position: relative;
-    width: 100vw;
     max-width: 500px;
     padding-left: 2rem;
     align-items: start !important;
     gap: 0.3rem;
   }
-
   .nav-link {
     padding: 0px !important;
   }
-}
-@media only screen and (max-width: 475px) {
-  .navDiv {
-    padding-left: 3.5rem;
+  .nav-links-upper{
+    width: 100%;
+    .main-links{
+      width: 100%;
+    }
+    .extra-links{
+      width: none;
+    }
   }
 }
+
+
+
 
 /* Title Page */
 
@@ -241,13 +243,6 @@ footer::before {
     }
   }
   footer::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 50vh;
-    border-top: 10px solid red;
-    background-color: #fff;
-    transform: rotate(0deg);
-    z-index: -5;
+    content: none;
   }
 }

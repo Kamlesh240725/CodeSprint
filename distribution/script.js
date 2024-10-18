@@ -17,6 +17,200 @@ if(initailActive){
     initailActive.classList.add("active")
 }
 
+/* Nav Mobile */
+
+const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        if (this.classList.contains("partners")) {
+           gsap.to(".nav-links-lower",{
+               x: -115,
+               duration: 0.5,
+               delay: 0,
+               ease: "power2.inOut"
+           })    
+           gsap.to(".main-navlinks",{
+               x: -70,
+               gap: '1rem',
+               duration: 0.5,
+               delay: 0,
+               ease: "power2.inOut"
+           })    
+           gsap.to(".extra-navlinks",{
+               x: -70,
+               duration: 0.5,
+               delay: 0,
+               ease: "power2.inOut"
+           }) 
+           gsap.to(".innerframe",{
+            duration: 0.5,
+            scrollTo: {y:"#partners"},
+            delay: 0
+           })   
+       } 
+        if (this.classList.contains("prizes")) {
+           gsap.to(".nav-links-lower",{
+               x: -230,
+               duration: 0.5,
+               delay: 0,
+               ease: "power2.inOut"
+           })  
+           gsap.to(".main-navlinks",{
+            x: -136,
+            gap: '0.75rem',
+            duration: 0.5,
+            delay: 0,
+            ease: "power2.inOut"
+            })    
+        gsap.to(".extra-navlinks",{
+            x: -134,
+            gap: '0.75rem',
+            duration: 0.5,
+            delay: 0,
+            ease: "power2.inOut"
+            })    
+            gsap.to(".innerframe",{
+                duration: 0.5,
+                scrollTo: {y:"#prizes"},
+                delay: 0
+               })  
+       } 
+        if (this.classList.contains("faqs")) {
+           gsap.to(".nav-links-lower",{
+               x: -345,
+               duration: 0.5,
+               delay: 0,
+               ease: "power2.inOut"
+           })   
+           gsap.to(".main-navlinks",{
+            x: -180,
+            gap: '0.70rem',
+            duration: 0.5,
+            delay: 0,
+            ease: "power2.inOut"
+            })    
+        gsap.to(".extra-navlinks",{
+            x: -180,
+            gap: '0.70rem',
+            duration: 0.5,
+            delay: 0,
+            ease: "power2.inOut"
+            })  
+            gsap.to(".innerframe",{
+                duration: 0.5,
+                scrollTo: {y:"#faqs"},
+                delay: 0
+               })  
+       } 
+        if (this.classList.contains("contact")) {
+           gsap.to(".nav-links-lower",{
+               x: -460,
+               duration: 0.5,
+               delay: 0,
+               ease: "power2.inOut"
+           })    
+           gsap.to(".main-navlinks",{
+            x: -245,
+            gap: '0.75rem',
+            duration: 0.5,
+            delay: 0,
+            ease: "power2.inOut"
+            })    
+        gsap.to(".extra-navlinks",{
+            x: -245,
+            gap: '0.75rem',
+            duration: 0.5,
+            delay: 0,
+            ease: "power2.inOut"
+            })  
+            gsap.to(".innerframe",{
+                duration: 0.5,
+                scrollTo: {y:"#contact"},
+                delay: 0
+               }) 
+       } 
+        if (this.classList.contains("home")) {
+           gsap.to(".nav-links-lower",{
+               x: 0,
+               duration: 0.5,
+               delay: 0,
+               ease: "power2.inOut"
+           })  
+           gsap.to(".main-navlinks",{
+            x: 0,
+            gap: '0.5rem',
+            duration: 0.5,
+            delay: 0,
+            ease: "power2.inOut"
+            })    
+        gsap.to(".extra-navlinks",{
+            x: 0,
+            gap: '0.5rem',
+            duration: 0.5,
+            delay: 0,
+            ease: "power2.inOut"
+            })   
+            gsap.to(".innerframe",{
+                duration: 0.5,
+                scrollTo: {y:0},
+                delay: 0
+               }) 
+       } 
+      })
+    });
+
+
+
+
+
+
+/* Our Team Card Rotate Logic for touch display */
+
+function is_touch_enabled() {
+    return ( 'ontouchstart' in window ) || 
+           ( navigator.maxTouchPoints > 0 ) ||
+           ( navigator.msMaxTouchPoints > 0 );
+}
+if( is_touch_enabled() ) {
+    
+    
+    
+    let teamCardGSAPTimeline = gsap.timeline();
+    document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.team-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Check if the clicked card is already active
+            const isActive = this.classList.contains('active');
+            
+            // Remove active class from all cards and reset image rotation
+            cards.forEach(b => {
+                b.classList.remove('active');
+                b.classList.remove('team-card-active');
+                teamCardGSAPTimeline.to(".team-card",{
+                    rotateY:0,
+                    delay:0,
+                    duration:0.005
+                })
+            });
+            
+            // If the clicked card was not active, add the active class
+            if (!isActive) {
+                this.classList.add('active');
+                this.classList.add('team-card-active'); // Rotate image
+                teamCardGSAPTimeline.to(".team-card-active",{
+                    rotateY:180,
+                    delay:0,
+                    duration:0.005
+                })
+            }
+        });
+    });
+});
+
+}
+
 /* FAQ Btn Toggle Script */
 let faqBtnGSAPTimeline = gsap.timeline();
 document.addEventListener("DOMContentLoaded", function() {
