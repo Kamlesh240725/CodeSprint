@@ -191,6 +191,79 @@ nav {
     rgba(233, 148, 148, 0) 100%
   );
 }
+@media only screen and (max-width: 930px){
+  .prize-section{
+    .prizes{
+      transform: scale(0.8);
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 720px){
+  .prize-section{
+    .prizes{
+      transform: scale(0.6);
+      width: 130%;
+    }
+  }
+}
+@media only screen and (max-width: 560px){
+  .prize-section{
+    .prizes{
+      transform: scale(0.55);
+      width: 150%;
+    }
+  }
+}
+@media only screen and (max-width: 480px){
+  .prize-section{
+    .prizes{
+      transform: scale(0.5);
+      width: 180%;
+      .prize-two, .prize-three{
+        top: 12rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 395px){
+  .prize-section{
+    .prizes{
+      transform: scale(0.45);
+      width: 200%;
+      .prize-two, .prize-three{
+        top: 12rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px){
+  .prize-section{
+    .prizes{
+      transform: scale(0.4);
+      width: 220%;
+      .prize-two, .prize-three{
+        top: 12rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 840px) and (min-width: 480px){
+  .prize-section{
+    .final-prize-hero-text{
+      font-size: 5rem;
+    }
+  }
+}
+@media only screen and (max-width: 395px){
+  .prize-section{
+    .final-prize-hero-text{
+      font-size: 3rem;
+    }
+  }
+}
+
+
 #box li .btn.active {
   color: white;
 }
@@ -201,6 +274,8 @@ nav {
   display: none; /* Hides the element */
 }
 
+
+/* Footer Section */
 footer {
   padding-top: 130px;
   position: relative;
@@ -232,7 +307,6 @@ footer::before {
     }
   }
 }
-
 @media only screen and (max-width: 768px) {
   footer {
     .footer-info {
